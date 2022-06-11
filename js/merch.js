@@ -62,7 +62,7 @@ searchBtn.addEventListener('click', () => {
         searchInput.placeholder = 'Enter something'
     } else {
         for (let i = 0; i < itemsList.length; i++) {
-            if (searchInput.value === itemsList[i].item) {
+            if (searchInput.value.toLowerCase() === itemsList[i].item.toLowerCase()) {
                 searchMatch.push(itemsList[i])
                 storeContainer.style.display = 'none'
                 searchResultContainer.style.display = 'flex'
